@@ -1,0 +1,45 @@
+---
+openapi: 3.0.3
+info:
+  title: code-with-quarkus API
+  version: 1.0.0-SNAPSHOT
+paths:
+  /labseq/{num}:
+    get:
+      tags:
+      - Lab Seq
+      parameters:
+      - name: num
+        in: path
+        required: true
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+  /openapi:
+    get:
+      tags:
+      - Accept Header Open Api Resource
+      responses:
+        "200":
+          description: OK
+  /openapi.{type}:
+    get:
+      tags:
+      - Open Api Resource
+      parameters:
+      - name: type
+        in: path
+        required: true
+        schema:
+          pattern: json|yaml
+          type: string
+      responses:
+        "200":
+          description: OK
