@@ -1,8 +1,10 @@
 # JavaExercise
 
 ## To run the application: 
+```
 $ cd code-with-quarkus
 $ quarkus dev
+```
 
 The server starts running at http://localhost:8080
 
